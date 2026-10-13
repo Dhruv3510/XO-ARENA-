@@ -1,0 +1,86 @@
+:root {
+  /* Color Palette - Dark Gaming Theme */
+  --bg-dark: #07060e;
+  --bg-card: rgba(18, 16, 36, 0.7);
+  --bg-card-hover: rgba(28, 24, 54, 0.85);
+  --border-subtle: rgba(168, 85, 247, 0.2);
+  --border-glow: rgba(34, 211, 238, 0.4);
+
+  /* Accents */
+  --cyan-primary: #00f2fe;
+  --cyan-glow: rgba(0, 242, 254, 0.4);
+  --cyan-deep: #0891b2;
+
+  --purple-primary: #a855f7;
+  --purple-glow: rgba(168, 85, 247, 0.45);
+  --purple-deep: #7e22ce;
+
+  --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #a855f7 100%);
+  --neon-border-gradient: linear-gradient(135deg, rgba(0, 242, 254, 0.6), rgba(168, 85, 247, 0.6));
+
+  /* Text Colors */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  /* Typography */
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', var(--font-main);
+
+  /* Shadows & Glows */
+  --shadow-purple: 0 0 35px -5px rgba(168, 85, 247, 0.35);
+  --shadow-cyan: 0 0 35px -5px rgba(0, 242, 254, 0.35);
+  --glass-blur: blur(16px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ambient animated background grid and glow */
+body {
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(0, 242, 254, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(126, 34, 206, 0.15) 0%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080711;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2444;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-primary);
+}
+
